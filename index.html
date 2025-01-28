@@ -12,10 +12,12 @@
             padding: 20px;
             background-color: #f8f9fa;
         }
-        h1 {
+        h1, h2 {
             color: #2c3e50;
             text-align: center;
             padding: 20px 0;
+        }
+        h1 {
             border-bottom: 3px solid #3498db;
         }
         p {
@@ -24,22 +26,129 @@
             font-size: 18px;
             text-align: center;
         }
-        .contact-info {
+        .section {
             background-color: white;
-            padding: 20px;
-            margin-top: 20px;
+            padding: 30px;
+            margin: 30px 0;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .service-card {
+            background-color: #f1f8ff;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .testimonial {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f1f8ff;
+            border-radius: 6px;
         }
     </style>
 </head>
 <body>
     <h1>Welcome to DLL Solutions</h1>
     <p>Your trusted partner in software development and technology solutions.</p>
-    
-    <div class="contact-info">
-        <p>Located at: 58 Main St, Topsfield, MA</p>
-        <p>Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
+
+    <div class="section">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Software Development</h3>
+                <p>Custom software solutions tailored to your business needs</p>
+            </div>
+            <div class="service-card">
+                <h3>System Integration</h3>
+                <p>Seamless integration of your business systems</p>
+            </div>
+            <div class="service-card">
+                <h3>Technology Consulting</h3>
+                <p>Expert guidance for your technical decisions</p>
+            </div>
+            <div class="service-card">
+                <h3>Support Services</h3>
+                <p>Reliable technical support and maintenance</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>About Us</h2>
+        <p>At DLL Solutions, we bring over a decade of experience in delivering high-quality software solutions. Our team of expert developers and consultants are passionate about helping businesses succeed through technology.</p>
+        
+        <h3 style="text-align: center; margin-top: 30px;">What Our Clients Say</h3>
+        <div class="testimonial">
+            <p>"DLL Solutions transformed our business processes with their innovative software solutions. Their expertise and professional approach made the entire project a success."</p>
+            <p style="text-align: right;">- John Smith, CEO of Tech Innovations</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Contact Us</h2>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <p>58 Main St, Topsfield, MA</p>
+            <p>Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
+            <p>Email: contact@dllsolutions.com</p>
+            <p>Phone: (555) 123-4567</p>
+        </div>
+
+        <div class="contact-form">
+            <h3 style="text-align: center;">Send us a message</h3>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
